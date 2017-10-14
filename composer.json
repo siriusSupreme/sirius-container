@@ -43,6 +43,7 @@
   },
   "suggest": {},
   "extra": {},
+
   "minimum-stability": "stable",
   "prefer-stable": true,
   "repositories": {
