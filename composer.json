@@ -50,6 +50,7 @@
       "url": "https://packagist.phpcomposer.com"
     }
   },
+
   "config": {
     "preferred-install": "dist",
     "sort-packages": true,
