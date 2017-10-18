@@ -13,7 +13,7 @@ interface Container extends ContainerInterface
      * @param  string  $abstract
      * @return bool
      */
-    public function bound($abstract): bool;
+    public function bound($abstract);
 
     /**
      * Alias a type to a different name.
@@ -39,7 +39,7 @@ interface Container extends ContainerInterface
      * @param  array  $tag
      * @return array
      */
-    public function tagged($tag): array;
+    public function tagged($tag);
 
     /**
      * Register a binding with the container.
@@ -94,6 +94,7 @@ interface Container extends ContainerInterface
      * Define a contextual binding.
      *
      * @param  string  $concrete
+     *
      * @return \Sirius\Container\Contracts\ContextualBindingBuilder
      */
     public function when($concrete);

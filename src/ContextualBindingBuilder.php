@@ -32,7 +32,7 @@ class ContextualBindingBuilder implements ContextualBindingBuilderContract
      *
      * @param  \Sirius\Container\Container  $container
      * @param  string  $concrete
-     * @return void
+     *
      */
     public function __construct(Container $container, $concrete)
     {

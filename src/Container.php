@@ -136,6 +136,7 @@ class Container implements ArrayAccess, ContainerContract
      * Define a contextual binding.
      *
      * @param  string  $concrete
+     *
      * @return \Sirius\Container\Contracts\ContextualBindingBuilder
      */
     public function when($concrete)
@@ -149,7 +150,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  string  $abstract
      * @return bool
      */
-    public function bound($abstract): bool
+    public function bound($abstract)
     {
         return isset($this->bindings[$abstract]) ||
                isset($this->instances[$abstract]) ||
@@ -435,7 +436,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  string  $tag
      * @return array
      */
-    public function tagged($tag): array
+    public function tagged($tag)
     {
         $results = [];
 
@@ -737,6 +738,7 @@ class Container implements ArrayAccess, ContainerContract
      * Instantiate a concrete instance of the given type.
      *
      * @param  string  $concrete
+     *
      * @return mixed
      *
      * @throws \Sirius\Container\Exceptions\BindingResolutionException
@@ -855,6 +857,7 @@ class Container implements ArrayAccess, ContainerContract
      * Resolve a non-class hinted primitive dependency.
      *
      * @param  \ReflectionParameter  $parameter
+     *
      * @return mixed
      *
      * @throws \Sirius\Container\Exceptions\BindingResolutionException
@@ -876,6 +879,7 @@ class Container implements ArrayAccess, ContainerContract
      * Resolve a class based dependency from the container.
      *
      * @param  \ReflectionParameter  $parameter
+     *
      * @return mixed
      *
      * @throws \Sirius\Container\Exceptions\BindingResolutionException
@@ -902,6 +906,7 @@ class Container implements ArrayAccess, ContainerContract
      * Throw an exception that the concrete is not instantiable.
      *
      * @param  string  $concrete
+     *
      * @return void
      *
      * @throws \Sirius\Container\Exceptions\BindingResolutionException
@@ -923,6 +928,7 @@ class Container implements ArrayAccess, ContainerContract
      * Throw an exception for an unresolvable primitive.
      *
      * @param  \ReflectionParameter  $parameter
+     *
      * @return void
      *
      * @throws \Sirius\Container\Exceptions\BindingResolutionException

@@ -16,6 +16,7 @@ class BoundMethod
      * @param  callable|string  $callback
      * @param  array  $parameters
      * @param  string|null  $defaultMethod
+     *
      * @return mixed
      */
     public static function call($container, $callback, array $parameters = [], $defaultMethod = null)
@@ -38,6 +39,7 @@ class BoundMethod
      * @param  string  $target
      * @param  array  $parameters
      * @param  string|null  $defaultMethod
+     *
      * @return mixed
      *
      * @throws \InvalidArgumentException
@@ -67,6 +69,7 @@ class BoundMethod
      * @param  \Sirius\Container\Container  $container
      * @param  callable  $callback
      * @param  mixed  $default
+     *
      * @return mixed
      */
     protected static function callBoundMethod($container, $callback, $default)
@@ -106,6 +109,7 @@ class BoundMethod
      * @param  \Sirius\Container\Container  $container
      * @param  callable|string  $callback
      * @param  array  $parameters
+     *
      * @return array
      */
     protected static function getMethodDependencies($container, $callback, array $parameters = [])
@@ -143,7 +147,8 @@ class BoundMethod
      * @param  \ReflectionParameter  $parameter
      * @param  array  $parameters
      * @param  array  $dependencies
-     * @return void
+     *
+     * @return mixed
      */
     protected static function addDependencyForCallParameter($container, $parameter,
                                                             array &$parameters, &$dependencies)
